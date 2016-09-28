@@ -155,10 +155,11 @@
 }
 
 - (NSString*)getTimeFromSeconds:(NSString*)seconds {
-    int totalTime = seconds.intValue;
-    int hours = totalTime / 3600;
-    int minutes = (totalTime % 3600) / 60;
-    return [NSString stringWithFormat:@"%d:%d",hours,minutes];
+    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:seconds.integerValue];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"hh:mm"];
+    NSString *dateString = [formatter stringFromDate:date];
+    return dateString;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
