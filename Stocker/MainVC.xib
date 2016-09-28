@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="veriparkLogo" translatesAutoresizingMaskIntoConstraints="NO" id="lGj-Xv-o7J">
+                    <rect key="frame" x="30" y="60" width="260" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="xWq-Gl-zRR"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwV-Qk-GxD" userLabel="sampleButtonView">
+                    <rect key="frame" x="10" y="170" width="300" height="60"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleButton" translatesAutoresizingMaskIntoConstraints="NO" id="XN5-T6-OGp">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBb-9P-vZn">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                            <connections>
+                                <action selector="buttonActionIMKBHisse:" destination="-1" eventType="touchUpInside" id="Reo-aG-fql"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMKB Hisse Senetleri / Endeksler Listesi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="P1V-jE-VOJ">
+                            <rect key="frame" x="10" y="8" width="280" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="P1V-jE-VOJ" secondAttribute="centerX" id="3IL-Va-t4Y"/>
+                        <constraint firstAttribute="centerX" secondItem="eBb-9P-vZn" secondAttribute="centerX" id="4Ca-rq-gcM"/>
+                        <constraint firstAttribute="centerY" secondItem="P1V-jE-VOJ" secondAttribute="centerY" constant="2" id="4az-2w-HoQ"/>
+                        <constraint firstItem="eBb-9P-vZn" firstAttribute="height" secondItem="JwV-Qk-GxD" secondAttribute="height" id="5Ua-gd-nCa"/>
+                        <constraint firstItem="eBb-9P-vZn" firstAttribute="width" secondItem="JwV-Qk-GxD" secondAttribute="width" id="6Mk-mc-ykN"/>
+                        <constraint firstItem="P1V-jE-VOJ" firstAttribute="width" secondItem="JwV-Qk-GxD" secondAttribute="width" constant="-20" id="9YK-G5-Iq3"/>
+                        <constraint firstAttribute="centerY" secondItem="eBb-9P-vZn" secondAttribute="centerY" id="JAf-0e-9tq"/>
+                        <constraint firstAttribute="height" constant="60" id="MXv-LO-jFa"/>
+                        <constraint firstItem="XN5-T6-OGp" firstAttribute="height" secondItem="JwV-Qk-GxD" secondAttribute="height" id="UjP-EY-gPk"/>
+                        <constraint firstAttribute="centerY" secondItem="XN5-T6-OGp" secondAttribute="centerY" id="a2B-qv-NIB"/>
+                        <constraint firstAttribute="centerX" secondItem="XN5-T6-OGp" secondAttribute="centerX" id="jhY-JE-xxp"/>
+                        <constraint firstItem="XN5-T6-OGp" firstAttribute="width" secondItem="JwV-Qk-GxD" secondAttribute="width" id="klg-WV-BlO"/>
+                        <constraint firstItem="P1V-jE-VOJ" firstAttribute="height" secondItem="JwV-Qk-GxD" secondAttribute="height" constant="-20" id="vM1-Kk-Mjb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="JwV-Qk-GxD" firstAttribute="top" secondItem="lGj-Xv-o7J" secondAttribute="bottom" constant="30" id="7u6-8C-OkB"/>
+                <constraint firstItem="lGj-Xv-o7J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="KLH-xb-Uk4"/>
+                <constraint firstAttribute="trailing" secondItem="JwV-Qk-GxD" secondAttribute="trailing" constant="10" id="Pvl-l6-gPN"/>
+                <constraint firstAttribute="trailing" secondItem="lGj-Xv-o7J" secondAttribute="trailing" constant="30" id="adV-zm-Fnf"/>
+                <constraint firstItem="lGj-Xv-o7J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="djk-xp-Yra"/>
+                <constraint firstItem="JwV-Qk-GxD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="rXB-Q0-Bkb"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="282" y="351"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sampleButton" width="363" height="67"/>
+        <image name="veriparkLogo" width="1021" height="192"/>
+    </resources>
+</document>

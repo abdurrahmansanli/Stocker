@@ -9,11 +9,29 @@
 /* Begin PBXBuildFile section */
 		15F204AB1D9AC2A90037DCA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204AA1D9AC2A90037DCA0 /* main.m */; };
 		15F204AE1D9AC2A90037DCA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204AD1D9AC2A90037DCA0 /* AppDelegate.m */; };
-		15F204B11D9AC2A90037DCA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204B01D9AC2A90037DCA0 /* ViewController.m */; };
 		15F204B41D9AC2A90037DCA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15F204B21D9AC2A90037DCA0 /* Main.storyboard */; };
 		15F204B61D9AC2A90037DCA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15F204B51D9AC2A90037DCA0 /* Images.xcassets */; };
 		15F204B91D9AC2A90037DCA0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F204B71D9AC2A90037DCA0 /* LaunchScreen.xib */; };
 		15F204C51D9AC2A90037DCA0 /* StockerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204C41D9AC2A90037DCA0 /* StockerTests.m */; };
+		15F204D31D9AC3280037DCA0 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204D11D9AC3280037DCA0 /* MainVC.m */; };
+		15F204D41D9AC3280037DCA0 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F204D21D9AC3280037DCA0 /* MainVC.xib */; };
+		15F204DC1D9ACF000037DCA0 /* SubcategoriesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204DA1D9ACF000037DCA0 /* SubcategoriesVC.m */; };
+		15F204DD1D9ACF000037DCA0 /* SubcategoriesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F204DB1D9ACF000037DCA0 /* SubcategoriesVC.xib */; };
+		15F204E31D9ACF880037DCA0 /* StocklistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204E11D9ACF880037DCA0 /* StocklistVC.m */; };
+		15F204E41D9ACF880037DCA0 /* StocklistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F204E21D9ACF880037DCA0 /* StocklistVC.xib */; };
+		15F204E81D9ACF9F0037DCA0 /* StockDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204E61D9ACF9F0037DCA0 /* StockDetailVC.m */; };
+		15F204E91D9ACF9F0037DCA0 /* StockDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F204E71D9ACF9F0037DCA0 /* StockDetailVC.xib */; };
+		15F204ED1D9AD23F0037DCA0 /* ServiceConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204EC1D9AD23F0037DCA0 /* ServiceConnector.m */; };
+		15F204FB1D9AFC7B0037DCA0 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204FA1D9AFC7B0037DCA0 /* XMLDictionary.m */; };
+		15F205011D9B05000037DCA0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F205001D9B05000037DCA0 /* BaseViewController.m */; };
+		15F205061D9B08FE0037DCA0 /* CategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F205041D9B08FE0037DCA0 /* CategoryTVC.m */; };
+		15F205071D9B08FE0037DCA0 /* CategoryTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F205051D9B08FE0037DCA0 /* CategoryTVC.xib */; };
+		15F2050B1D9B0A000037DCA0 /* StockAndIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F2050A1D9B0A000037DCA0 /* StockAndIndex.m */; };
+		15F2050F1D9B125D0037DCA0 /* GenericUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F2050E1D9B125D0037DCA0 /* GenericUIKit.m */; };
+		15F205131D9B20830037DCA0 /* StocklistTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F205111D9B20830037DCA0 /* StocklistTVC.m */; };
+		15F205141D9B20830037DCA0 /* StocklistTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F205121D9B20830037DCA0 /* StocklistTVC.xib */; };
+		15F205181D9B4D500037DCA0 /* StockAndIndexGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F205171D9B4D500037DCA0 /* StockAndIndexGraphic.m */; };
+		EF959D8CC4765244B30FF0B1 /* Pods_Stocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FD1CE10A40982F5F3AD64B /* Pods_Stocker.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +50,45 @@
 		15F204AA1D9AC2A90037DCA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15F204AC1D9AC2A90037DCA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15F204AD1D9AC2A90037DCA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		15F204AF1D9AC2A90037DCA0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		15F204B01D9AC2A90037DCA0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		15F204B31D9AC2A90037DCA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15F204B51D9AC2A90037DCA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		15F204B81D9AC2A90037DCA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		15F204BE1D9AC2A90037DCA0 /* StockerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15F204C31D9AC2A90037DCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15F204C41D9AC2A90037DCA0 /* StockerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockerTests.m; sourceTree = "<group>"; };
+		15F204D01D9AC3280037DCA0 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
+		15F204D11D9AC3280037DCA0 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		15F204D21D9AC3280037DCA0 /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		15F204D91D9ACF000037DCA0 /* SubcategoriesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubcategoriesVC.h; sourceTree = "<group>"; };
+		15F204DA1D9ACF000037DCA0 /* SubcategoriesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubcategoriesVC.m; sourceTree = "<group>"; };
+		15F204DB1D9ACF000037DCA0 /* SubcategoriesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubcategoriesVC.xib; sourceTree = "<group>"; };
+		15F204E01D9ACF880037DCA0 /* StocklistVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StocklistVC.h; sourceTree = "<group>"; };
+		15F204E11D9ACF880037DCA0 /* StocklistVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StocklistVC.m; sourceTree = "<group>"; };
+		15F204E21D9ACF880037DCA0 /* StocklistVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StocklistVC.xib; sourceTree = "<group>"; };
+		15F204E51D9ACF9F0037DCA0 /* StockDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockDetailVC.h; sourceTree = "<group>"; };
+		15F204E61D9ACF9F0037DCA0 /* StockDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockDetailVC.m; sourceTree = "<group>"; };
+		15F204E71D9ACF9F0037DCA0 /* StockDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StockDetailVC.xib; sourceTree = "<group>"; };
+		15F204EB1D9AD23F0037DCA0 /* ServiceConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceConnector.h; sourceTree = "<group>"; };
+		15F204EC1D9AD23F0037DCA0 /* ServiceConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceConnector.m; sourceTree = "<group>"; };
+		15F204F91D9AFC7B0037DCA0 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		15F204FA1D9AFC7B0037DCA0 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		15F204FF1D9B05000037DCA0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		15F205001D9B05000037DCA0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		15F205031D9B08FE0037DCA0 /* CategoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTVC.h; sourceTree = "<group>"; };
+		15F205041D9B08FE0037DCA0 /* CategoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTVC.m; sourceTree = "<group>"; };
+		15F205051D9B08FE0037DCA0 /* CategoryTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTVC.xib; sourceTree = "<group>"; };
+		15F205091D9B0A000037DCA0 /* StockAndIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockAndIndex.h; sourceTree = "<group>"; };
+		15F2050A1D9B0A000037DCA0 /* StockAndIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockAndIndex.m; sourceTree = "<group>"; };
+		15F2050D1D9B125D0037DCA0 /* GenericUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericUIKit.h; sourceTree = "<group>"; };
+		15F2050E1D9B125D0037DCA0 /* GenericUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericUIKit.m; sourceTree = "<group>"; };
+		15F205101D9B20830037DCA0 /* StocklistTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StocklistTVC.h; sourceTree = "<group>"; };
+		15F205111D9B20830037DCA0 /* StocklistTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StocklistTVC.m; sourceTree = "<group>"; };
+		15F205121D9B20830037DCA0 /* StocklistTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StocklistTVC.xib; sourceTree = "<group>"; };
+		15F205161D9B4D500037DCA0 /* StockAndIndexGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockAndIndexGraphic.h; sourceTree = "<group>"; };
+		15F205171D9B4D500037DCA0 /* StockAndIndexGraphic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockAndIndexGraphic.m; sourceTree = "<group>"; };
+		22FD1CE10A40982F5F3AD64B /* Pods_Stocker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stocker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		319AD86B2E97AA067EC5F36B /* Pods-Stocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stocker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stocker/Pods-Stocker.release.xcconfig"; sourceTree = "<group>"; };
+		D9CDCF8C01133109E7BE0DBC /* Pods-Stocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stocker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stocker/Pods-Stocker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF959D8CC4765244B30FF0B1 /* Pods_Stocker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +116,8 @@
 				15F204A71D9AC2A90037DCA0 /* Stocker */,
 				15F204C11D9AC2A90037DCA0 /* StockerTests */,
 				15F204A61D9AC2A90037DCA0 /* Products */,
+				3F5941C69B80377045AE31D8 /* Pods */,
+				FA90356539FAA67734D6C5CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,13 +133,11 @@
 		15F204A71D9AC2A90037DCA0 /* Stocker */ = {
 			isa = PBXGroup;
 			children = (
-				15F204AC1D9AC2A90037DCA0 /* AppDelegate.h */,
-				15F204AD1D9AC2A90037DCA0 /* AppDelegate.m */,
-				15F204AF1D9AC2A90037DCA0 /* ViewController.h */,
-				15F204B01D9AC2A90037DCA0 /* ViewController.m */,
-				15F204B21D9AC2A90037DCA0 /* Main.storyboard */,
-				15F204B51D9AC2A90037DCA0 /* Images.xcassets */,
-				15F204B71D9AC2A90037DCA0 /* LaunchScreen.xib */,
+				15F204FE1D9B04DD0037DCA0 /* Base */,
+				15F204FC1D9B04C30037DCA0 /* Libraries */,
+				15F205081D9B09A60037DCA0 /* Model */,
+				15F204CE1D9AC2E80037DCA0 /* Service */,
+				15F204CF1D9AC2F50037DCA0 /* Views */,
 				15F204A81D9AC2A90037DCA0 /* Supporting Files */,
 			);
 			path = Stocker;
@@ -96,8 +146,13 @@
 		15F204A81D9AC2A90037DCA0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				15F204AC1D9AC2A90037DCA0 /* AppDelegate.h */,
+				15F204AD1D9AC2A90037DCA0 /* AppDelegate.m */,
+				15F204B51D9AC2A90037DCA0 /* Images.xcassets */,
 				15F204A91D9AC2A90037DCA0 /* Info.plist */,
 				15F204AA1D9AC2A90037DCA0 /* main.m */,
+				15F204B21D9AC2A90037DCA0 /* Main.storyboard */,
+				15F204B71D9AC2A90037DCA0 /* LaunchScreen.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +174,152 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		15F204CE1D9AC2E80037DCA0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				15F204EA1D9AD21B0037DCA0 /* ServiceConnector */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		15F204CF1D9AC2F50037DCA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15F204D71D9ACEE20037DCA0 /* Main */,
+				15F204D81D9ACEEA0037DCA0 /* Subcategories */,
+				15F204DE1D9ACF280037DCA0 /* StockList */,
+				15F204DF1D9ACF470037DCA0 /* StockDetail */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		15F204D71D9ACEE20037DCA0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				15F204D01D9AC3280037DCA0 /* MainVC.h */,
+				15F204D11D9AC3280037DCA0 /* MainVC.m */,
+				15F204D21D9AC3280037DCA0 /* MainVC.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		15F204D81D9ACEEA0037DCA0 /* Subcategories */ = {
+			isa = PBXGroup;
+			children = (
+				15F204D91D9ACF000037DCA0 /* SubcategoriesVC.h */,
+				15F204DA1D9ACF000037DCA0 /* SubcategoriesVC.m */,
+				15F204DB1D9ACF000037DCA0 /* SubcategoriesVC.xib */,
+				15F205021D9B08E50037DCA0 /* Cell */,
+			);
+			name = Subcategories;
+			sourceTree = "<group>";
+		};
+		15F204DE1D9ACF280037DCA0 /* StockList */ = {
+			isa = PBXGroup;
+			children = (
+				15F204E01D9ACF880037DCA0 /* StocklistVC.h */,
+				15F204E11D9ACF880037DCA0 /* StocklistVC.m */,
+				15F204E21D9ACF880037DCA0 /* StocklistVC.xib */,
+				15F2050C1D9B0EAD0037DCA0 /* Cell */,
+			);
+			name = StockList;
+			sourceTree = "<group>";
+		};
+		15F204DF1D9ACF470037DCA0 /* StockDetail */ = {
+			isa = PBXGroup;
+			children = (
+				15F204E51D9ACF9F0037DCA0 /* StockDetailVC.h */,
+				15F204E61D9ACF9F0037DCA0 /* StockDetailVC.m */,
+				15F204E71D9ACF9F0037DCA0 /* StockDetailVC.xib */,
+			);
+			name = StockDetail;
+			sourceTree = "<group>";
+		};
+		15F204EA1D9AD21B0037DCA0 /* ServiceConnector */ = {
+			isa = PBXGroup;
+			children = (
+				15F204EB1D9AD23F0037DCA0 /* ServiceConnector.h */,
+				15F204EC1D9AD23F0037DCA0 /* ServiceConnector.m */,
+			);
+			name = ServiceConnector;
+			sourceTree = "<group>";
+		};
+		15F204FC1D9B04C30037DCA0 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				15F204FD1D9B04CD0037DCA0 /* XMLDictionary */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		15F204FD1D9B04CD0037DCA0 /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				15F204F91D9AFC7B0037DCA0 /* XMLDictionary.h */,
+				15F204FA1D9AFC7B0037DCA0 /* XMLDictionary.m */,
+			);
+			name = XMLDictionary;
+			sourceTree = "<group>";
+		};
+		15F204FE1D9B04DD0037DCA0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				15F204FF1D9B05000037DCA0 /* BaseViewController.h */,
+				15F205001D9B05000037DCA0 /* BaseViewController.m */,
+				15F2050D1D9B125D0037DCA0 /* GenericUIKit.h */,
+				15F2050E1D9B125D0037DCA0 /* GenericUIKit.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		15F205021D9B08E50037DCA0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				15F205031D9B08FE0037DCA0 /* CategoryTVC.h */,
+				15F205041D9B08FE0037DCA0 /* CategoryTVC.m */,
+				15F205051D9B08FE0037DCA0 /* CategoryTVC.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		15F205081D9B09A60037DCA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15F205091D9B0A000037DCA0 /* StockAndIndex.h */,
+				15F2050A1D9B0A000037DCA0 /* StockAndIndex.m */,
+				15F205161D9B4D500037DCA0 /* StockAndIndexGraphic.h */,
+				15F205171D9B4D500037DCA0 /* StockAndIndexGraphic.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		15F2050C1D9B0EAD0037DCA0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				15F205101D9B20830037DCA0 /* StocklistTVC.h */,
+				15F205111D9B20830037DCA0 /* StocklistTVC.m */,
+				15F205121D9B20830037DCA0 /* StocklistTVC.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		3F5941C69B80377045AE31D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9CDCF8C01133109E7BE0DBC /* Pods-Stocker.debug.xcconfig */,
+				319AD86B2E97AA067EC5F36B /* Pods-Stocker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA90356539FAA67734D6C5CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22FD1CE10A40982F5F3AD64B /* Pods_Stocker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +327,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15F204C81D9AC2A90037DCA0 /* Build configuration list for PBXNativeTarget "Stocker" */;
 			buildPhases = (
+				6D6DC8AD58AF32F957C62867 /* Check Pods Manifest.lock */,
 				15F204A11D9AC2A90037DCA0 /* Sources */,
 				15F204A21D9AC2A90037DCA0 /* Frameworks */,
 				15F204A31D9AC2A90037DCA0 /* Resources */,
+				A1B3282FD0F00FE98C046082 /* Embed Pods Frameworks */,
+				B8904D2D352C51804FBC3809 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +403,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15F204E91D9ACF9F0037DCA0 /* StockDetailVC.xib in Resources */,
 				15F204B41D9AC2A90037DCA0 /* Main.storyboard in Resources */,
+				15F204D41D9AC3280037DCA0 /* MainVC.xib in Resources */,
+				15F205071D9B08FE0037DCA0 /* CategoryTVC.xib in Resources */,
 				15F204B91D9AC2A90037DCA0 /* LaunchScreen.xib in Resources */,
+				15F204E41D9ACF880037DCA0 /* StocklistVC.xib in Resources */,
+				15F204DD1D9ACF000037DCA0 /* SubcategoriesVC.xib in Resources */,
 				15F204B61D9AC2A90037DCA0 /* Images.xcassets in Resources */,
+				15F205141D9B20830037DCA0 /* StocklistTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +424,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D6DC8AD58AF32F957C62867 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1B3282FD0F00FE98C046082 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stocker/Pods-Stocker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8904D2D352C51804FBC3809 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stocker/Pods-Stocker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15F204A11D9AC2A90037DCA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15F204B11D9AC2A90037DCA0 /* ViewController.m in Sources */,
+				15F204E81D9ACF9F0037DCA0 /* StockDetailVC.m in Sources */,
+				15F205011D9B05000037DCA0 /* BaseViewController.m in Sources */,
+				15F204FB1D9AFC7B0037DCA0 /* XMLDictionary.m in Sources */,
+				15F204D31D9AC3280037DCA0 /* MainVC.m in Sources */,
+				15F204DC1D9ACF000037DCA0 /* SubcategoriesVC.m in Sources */,
+				15F205061D9B08FE0037DCA0 /* CategoryTVC.m in Sources */,
+				15F205181D9B4D500037DCA0 /* StockAndIndexGraphic.m in Sources */,
 				15F204AE1D9AC2A90037DCA0 /* AppDelegate.m in Sources */,
+				15F204E31D9ACF880037DCA0 /* StocklistVC.m in Sources */,
+				15F2050F1D9B125D0037DCA0 /* GenericUIKit.m in Sources */,
+				15F204ED1D9AD23F0037DCA0 /* ServiceConnector.m in Sources */,
 				15F204AB1D9AC2A90037DCA0 /* main.m in Sources */,
+				15F2050B1D9B0A000037DCA0 /* StockAndIndex.m in Sources */,
+				15F205131D9B20830037DCA0 /* StocklistTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +616,7 @@
 		};
 		15F204C91D9AC2A90037DCA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9CDCF8C01133109E7BE0DBC /* Pods-Stocker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Stocker/Info.plist;
@@ -357,6 +627,7 @@
 		};
 		15F204CA1D9AC2A90037DCA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 319AD86B2E97AA067EC5F36B /* Pods-Stocker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Stocker/Info.plist;
@@ -418,6 +689,7 @@
 				15F204CA1D9AC2A90037DCA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15F204CB1D9AC2A90037DCA0 /* Build configuration list for PBXNativeTarget "StockerTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +698,7 @@
 				15F204CD1D9AC2A90037DCA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

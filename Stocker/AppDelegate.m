@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainVC.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    MainVC *mainVC = [MainVC new];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    navigationController.navigationBar.translucent = NO;
+    [self.window setRootViewController:navigationController];
+    
     return YES;
 }
 
