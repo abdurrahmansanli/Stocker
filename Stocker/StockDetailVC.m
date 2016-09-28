@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [GenericUIKit addNavigationBarButton:@"backButton" target:self action:@selector(backButton) width:20 height:20];
+    self.navigationItem.rightBarButtonItem = [GenericUIKit addNavigationBarButton:nil target:self action:nil width:20 height:20];
     self.arrayGraphData = [NSMutableArray new];
     [self loadData];
 }
