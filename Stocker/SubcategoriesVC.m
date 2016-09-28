@@ -72,6 +72,27 @@
             [self.navigationController pushViewController:stocklistVC animated:YES];
         }
             break;
+        case 3:
+        {
+            StocklistVC *stocklistVC = [StocklistVC new];
+            stocklistVC.boolBoolBist30 = YES;
+            [self.navigationController pushViewController:stocklistVC animated:YES];
+        }
+            break;
+        case 4:
+        {
+            StocklistVC *stocklistVC = [StocklistVC new];
+            stocklistVC.boolBoolBist50 = YES;
+            [self.navigationController pushViewController:stocklistVC animated:YES];
+        }
+            break;
+        case 5:
+        {
+            StocklistVC *stocklistVC = [StocklistVC new];
+            stocklistVC.boolBoolBist100 = YES;
+            [self.navigationController pushViewController:stocklistVC animated:YES];
+        }
+            break;
             
         default:
             break;

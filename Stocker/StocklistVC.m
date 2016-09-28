@@ -11,7 +11,7 @@
 #import "StocklistTVC.h"
 #import "StockAndIndex.h"
 #import "StockDetailVC.h"
-
+#import "StockAndIndexLimited.h"
 @interface StocklistVC ()
 
 @end
@@ -75,6 +75,7 @@
         self.constraintSearchViewTopSpacing.constant=-50;
         self.textFieldSearch.text = @"";
         [self searchFieldEdited];
+        [self.textFieldSearch resignFirstResponder];
     }
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3];
@@ -93,21 +94,51 @@
             NSDictionary *stocknIndexesResponseList = [getForexStocksandIndexesInfoResult objectForKey:@"StocknIndexesResponseList"];
             NSArray *stockandIndex = [stocknIndexesResponseList objectForKey:@"StockandIndex"];
             
-            for (NSDictionary *dict in stockandIndex) {
-                NSError *error;
-                StockAndIndex *stockAndIndex = [[StockAndIndex alloc] initWithDictionary:dict error:&error];
-                if (!self.boolAccendingOnly && !self.boolDescendingOnly) {
+            NSDictionary *IMKB30List = [getForexStocksandIndexesInfoResult objectForKey:@"IMKB30List"];
+            NSArray *IMKB30 = [IMKB30List objectForKey:@"IMKB30"];
+            
+            NSDictionary *IMKB50List = [getForexStocksandIndexesInfoResult objectForKey:@"IMKB50List"];
+            NSArray *IMKB50 = [IMKB50List objectForKey:@"IMKB50"];
+            
+            NSDictionary *IMKB100List = [getForexStocksandIndexesInfoResult objectForKey:@"IMKB100List"];
+            NSArray *IMKB100 = [IMKB100List objectForKey:@"IMKB100"];
+            
+            if (self.boolBoolBist30) {
+                for (NSDictionary *dict in IMKB30) {
+                    NSError *error;
+                    StockAndIndexLimited *stockAndIndex = [[StockAndIndexLimited alloc] initWithDictionary:dict error:&error];
                     [self.arrayData addObject:stockAndIndex];
-                } else if (self.boolAccendingOnly) {
-                    if (![stockAndIndex.Difference containsString:@"-"] && ![stockAndIndex.Difference isEqualToString:@"0.00"]) {
+                }
+            } else if (self.boolBoolBist50) {
+                for (NSDictionary *dict in IMKB50) {
+                    NSError *error;
+                    StockAndIndexLimited *stockAndIndex = [[StockAndIndexLimited alloc] initWithDictionary:dict error:&error];
+                    [self.arrayData addObject:stockAndIndex];
+                }
+            } else if (self.boolBoolBist100) {
+                for (NSDictionary *dict in IMKB100) {
+                    NSError *error;
+                    StockAndIndexLimited *stockAndIndex = [[StockAndIndexLimited alloc] initWithDictionary:dict error:&error];
+                    [self.arrayData addObject:stockAndIndex];
+                }
+            } else {
+                for (NSDictionary *dict in stockandIndex) {
+                    NSError *error;
+                    StockAndIndex *stockAndIndex = [[StockAndIndex alloc] initWithDictionary:dict error:&error];
+                    if (!self.boolAccendingOnly && !self.boolDescendingOnly) {
                         [self.arrayData addObject:stockAndIndex];
-                    }
-                } else if (self.boolDescendingOnly) {
-                    if ([stockAndIndex.Difference containsString:@"-"]) {
-                        [self.arrayData addObject:stockAndIndex];
+                    } else if (self.boolAccendingOnly) {
+                        if (![stockAndIndex.Difference containsString:@"-"] && ![stockAndIndex.Difference isEqualToString:@"0.00"]) {
+                            [self.arrayData addObject:stockAndIndex];
+                        }
+                    } else if (self.boolDescendingOnly) {
+                        if ([stockAndIndex.Difference containsString:@"-"]) {
+                            [self.arrayData addObject:stockAndIndex];
+                        }
                     }
                 }
             }
+            
             self.arrayDataFiltered = self.arrayData;
             [self hideProgressHud];
             [self.tableView reloadData];
@@ -132,23 +163,48 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     StocklistTVC *cell = [tableView dequeueReusableCellWithIdentifier:@"StocklistTVC" forIndexPath:indexPath];
-    StockAndIndex *stockAndIndex = [self.arrayDataFiltered objectAtIndex:indexPath.row];
-    cell.label1.text = stockAndIndex.Price;
-    cell.label2.text = stockAndIndex.Difference;
-    cell.label3.text = stockAndIndex.Volume;
-    cell.label4.text = stockAndIndex.Buying;
-    cell.label5.text = stockAndIndex.Selling;
-    cell.label6.text = [self getTimeFromSeconds:stockAndIndex.Hour];
-    cell.labelSymbol.text = stockAndIndex.Symbol;
+    
+    StockAndIndex *stockAndIndex;
+    StockAndIndexLimited *stockAndIndexLimited;
+    
+    if (self.boolBoolBist30 || self.boolBoolBist50 || self.boolBoolBist100) {
+        stockAndIndexLimited = [self.arrayDataFiltered objectAtIndex:indexPath.row];
+    } else {
+        stockAndIndex = [self.arrayDataFiltered objectAtIndex:indexPath.row];
+    }
+    
+    BOOL boolBist;
+    if (self.boolBoolBist30 || self.boolBoolBist50 || self.boolBoolBist100) {
+        boolBist = YES;
+        cell.labelTotal.text = [NSString stringWithFormat:@"%d M",stockAndIndexLimited.Fund.intValue/1000000];
+        cell.labelSymbol.text = stockAndIndexLimited.Symbol;
+    } else {
+        boolBist = NO;
+        cell.label1.text = stockAndIndex.Price;
+        cell.label2.text = stockAndIndex.Difference;
+        cell.label3.text = stockAndIndex.Volume;
+        cell.label4.text = stockAndIndex.Buying;
+        cell.label5.text = stockAndIndex.Selling;
+        cell.label6.text = [self getTimeFromSeconds:stockAndIndex.Hour];
+        cell.labelSymbol.text = stockAndIndex.Symbol;
+    }
+    
     if ([stockAndIndex.Difference containsString:@"-"]) {
         cell.image1.image = [UIImage imageNamed:@"downArrow"];
-        cell.labelTotal.text = stockAndIndex.DayLowestPrice;
+        if (!boolBist) {
+            cell.labelTotal.text = stockAndIndex.DayLowestPrice;
+        }
     } else if (![stockAndIndex.Price isEqualToString:@"0.00"]) {
         cell.image1.image = [UIImage imageNamed:@"upArrow"];
-        cell.labelTotal.text = stockAndIndex.DayPeakPrice;
+        if (!boolBist) {
+            cell.labelTotal.text = stockAndIndex.DayPeakPrice;
+        }
     } else {
-        cell.labelTotal.text = stockAndIndex.DayPeakPrice;
+        if (!boolBist) {
+            cell.labelTotal.text = stockAndIndex.DayPeakPrice;
+        }
     }
+    
     if (indexPath.row%2==0) {
         cell.backgroundColor = [GenericUIKit colorFromHexString:@"#ededed"];
     } else {
@@ -159,9 +215,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    StockDetailVC *stockDetailVC = [StockDetailVC new];
-    stockDetailVC.stockAndIndex = [self.arrayData objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:stockDetailVC animated:YES];
+    if (!self.boolBoolBist100 && !self.boolBoolBist50 && !self.boolBoolBist30) {
+        StockDetailVC *stockDetailVC = [StockDetailVC new];
+        stockDetailVC.stockAndIndex = [self.arrayData objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:stockDetailVC animated:YES];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {

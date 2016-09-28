@@ -20,5 +20,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintSearchViewTopSpacing;
 @property (nonatomic) BOOL boolAccendingOnly;
 @property (nonatomic) BOOL boolDescendingOnly;
+@property (nonatomic) BOOL boolBoolBist30;
+@property (nonatomic) BOOL boolBoolBist50;
+@property (nonatomic) BOOL boolBoolBist100;
 
 @end

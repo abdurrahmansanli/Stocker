@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15B99B031D9C0C2400F042A6 /* StockAndIndexLimited.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B99B021D9C0C2400F042A6 /* StockAndIndexLimited.m */; };
 		15F204AB1D9AC2A90037DCA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204AA1D9AC2A90037DCA0 /* main.m */; };
 		15F204AE1D9AC2A90037DCA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F204AD1D9AC2A90037DCA0 /* AppDelegate.m */; };
 		15F204B41D9AC2A90037DCA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15F204B21D9AC2A90037DCA0 /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15B99B011D9C0C2400F042A6 /* StockAndIndexLimited.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockAndIndexLimited.h; sourceTree = "<group>"; };
+		15B99B021D9C0C2400F042A6 /* StockAndIndexLimited.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockAndIndexLimited.m; sourceTree = "<group>"; };
 		15F204A51D9AC2A90037DCA0 /* Stocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15F204A91D9AC2A90037DCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15F204AA1D9AC2A90037DCA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 			children = (
 				15F205091D9B0A000037DCA0 /* StockAndIndex.h */,
 				15F2050A1D9B0A000037DCA0 /* StockAndIndex.m */,
+				15B99B011D9C0C2400F042A6 /* StockAndIndexLimited.h */,
+				15B99B021D9C0C2400F042A6 /* StockAndIndexLimited.m */,
 				15F205161D9B4D500037DCA0 /* StockAndIndexGraphic.h */,
 				15F205171D9B4D500037DCA0 /* StockAndIndexGraphic.m */,
 			);
@@ -489,6 +494,7 @@
 				15F2050F1D9B125D0037DCA0 /* GenericUIKit.m in Sources */,
 				15F204ED1D9AD23F0037DCA0 /* ServiceConnector.m in Sources */,
 				15F204AB1D9AC2A90037DCA0 /* main.m in Sources */,
+				15B99B031D9C0C2400F042A6 /* StockAndIndexLimited.m in Sources */,
 				15F2050B1D9B0A000037DCA0 /* StockAndIndex.m in Sources */,
 				15F205131D9B20830037DCA0 /* StocklistTVC.m in Sources */,
 			);
