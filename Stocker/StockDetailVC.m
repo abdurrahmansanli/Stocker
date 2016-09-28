@@ -9,12 +9,7 @@
 #import "StockDetailVC.h"
 
 @interface StockDetailVC ()
-{
-    double maxY;
-    double minY;
-    double maxX;
-    double minX;
-}
+
 @end
 
 @implementation StockDetailVC
@@ -55,33 +50,7 @@
                 [values addObject:stockAndIndexGraphic.Price];
             }
             
-            maxX = 0;
-            maxY = 0;
-            minX = 0;
-            minY = 0;
-            
-            for (int k=0;k<values.count;k++) {
-                NSString *value = [values objectAtIndex:k];
-                if (value.doubleValue>maxY) {
-                    NSString *str = [values objectAtIndex:k];
-                    maxY = str.doubleValue;
-                }
-            }
-            
-            minY = maxY;
-            
-            for (int k=0;k<values.count;k++) {
-                NSString *value = [values objectAtIndex:k];
-                if (value.doubleValue<minY) {
-                    NSString *str = [values objectAtIndex:k];
-                    minY = str.doubleValue;
-                }
-            }
-            
-            maxX = dates.count;
-            
             if (dates.count>0 && values.count>0) {
-                [self drawChartWithXValues:dates yValues:values];
                 
                 for (int k=0;k<dates.count;k++) {
                     UILabel *str = [[UILabel alloc] initWithFrame:CGRectMake(k*(self.viewChartArea.frame.size.width/dates.count), (self.viewChartArea.frame.size.height+10), 20, 30)];
@@ -91,10 +60,14 @@
                     [self.viewChartArea addSubview:str];
                 }
                 
-                NSMutableArray *arrayOfYElements = values;
+                NSMutableArray *arrayOfYElements = [NSMutableArray arrayWithArray:values];
                 NSSortDescriptor *highestToLowest = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:NO];
-                [arrayOfYElements sortUsingDescriptors:[NSArray arrayWithObject:highestToLowest]];
+                NSSortDescriptor *lowestToHighest = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES];
+                [arrayOfYElements sortUsingDescriptors:[NSArray arrayWithObject:lowestToHighest]];
+                
+                [self drawChartWithXValues:dates yValues:values yValuesOrder:arrayOfYElements];
 
+                [arrayOfYElements sortUsingDescriptors:[NSArray arrayWithObject:highestToLowest]];
                 for (int k=0;k<arrayOfYElements.count;k++) {
                     UILabel *str = [[UILabel alloc] initWithFrame:CGRectMake(-30, k*(self.viewChartArea.frame.size.height/arrayOfYElements.count), 50, 20)];
                     NSString *text = [arrayOfYElements objectAtIndex:k];
@@ -132,27 +105,18 @@
     return dateString;
 }
 
-- (void)drawChartWithXValues:(NSArray*)xValues yValues:(NSArray*)yValues {
+- (void)drawChartWithXValues:(NSArray*)xValues yValues:(NSArray*)yValues yValuesOrder:(NSArray*)yValuesOrder {
     [self drawRectFromPoint:CGPointMake(0, self.viewChartArea.frame.size.height) endingPoint:CGPointMake(0,0)];
     [self drawRectFromPoint:CGPointMake(0, self.viewChartArea.frame.size.height) endingPoint:CGPointMake(self.viewChartArea.frame.size.width,self.viewChartArea.frame.size.height)];
     
     for (int k=0;k+1<yValues.count;k++) {
-        NSString *val1 = [yValues objectAtIndex:k];
-        NSString *val2 = [yValues objectAtIndex:k+1];
-        [self addNewDrawingPoingFrom:CGPointMake(k, val1.doubleValue) to:CGPointMake(k+1, val2.doubleValue)];
+        NSUInteger index1 = [yValuesOrder indexOfObject:[yValues objectAtIndex:k]];
+        NSUInteger index2 = [yValuesOrder indexOfObject:[yValues objectAtIndex:k+1]];
+        double widthTicker = self.viewChartArea.frame.size.width/xValues.count;
+        double heightTicker = self.viewChartArea.frame.size.height/yValues.count;
+        
+        [self drawRectFromPoint:CGPointMake((k)*widthTicker, self.viewChartArea.frame.size.height-10-(heightTicker*index1)) endingPoint:CGPointMake((k+1)*widthTicker, self.viewChartArea.frame.size.height-10-(heightTicker*index2))];
     }
-}
-
-- (void)addNewDrawingPoingFrom:(CGPoint)from to:(CGPoint)to {
-    [self drawRectFromPoint:CGPointMake([self getXPlacementOfValue:from.x inMax:maxX], [self getYPlacementOfValue:from.y inMax:maxY]) endingPoint:CGPointMake([self getXPlacementOfValue:to.x inMax:maxX], [self getYPlacementOfValue:to.y inMax:maxY])];
-}
-
-- (CGFloat)getXPlacementOfValue:(CGFloat)value inMax:(CGFloat)inMax {
-    return (value*self.viewChartArea.frame.size.width)/inMax;
-}
-
-- (CGFloat)getYPlacementOfValue:(CGFloat)value inMax:(CGFloat)inMax {
-    return ((inMax-value)*self.viewChartArea.frame.size.height)/inMax;
 }
 
 - (void)drawRectFromPoint:(CGPoint)startingPoint endingPoint:(CGPoint)endingPoint {
