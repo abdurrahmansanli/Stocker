@@ -1,4 +1,4 @@
-- Access to stock prices.
+- Access stock prices.
 - Search by stock symbol name.
 - Detail screens including a line graph.
 - An example to common iOS concepts including tableviews, scrollviews, autolayout, usage of soap services with afnetworking etc.
